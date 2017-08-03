@@ -1,0 +1,112 @@
+@CHARSET "UTF-8";
+
+
+.logo_login {
+	width: 150px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 8px;
+}
+
+.head {
+	float: right;
+	margin-top: 10px;
+}
+
+.head a {
+	color: White;
+	text-decoration: underline;
+	margin-left: 10px;
+}
+
+.top_middle {
+	float: left;
+	margin-left: 100px;
+	margin-top: 15px;
+}
+
+
+.top_marquee {
+	float: left;
+	margin-left: 100px;
+	margin-top: -5px;
+	width: 60%;
+}
+
+.Modify_box {
+	width: 450px;
+	min-height: 280px;
+	float: left;
+	background-color: #cdd4e9;
+}
+
+.Modify_box {
+	width: 450px;
+	min-height: 280px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	background-color: #cdd4e9;
+}
+
+.Modify_div2 {
+	width: 400px;
+	height: 250px;
+	float: left;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 3;
+	padding-left: 50px;
+	padding-top: 20px;
+}
+
+.Modify_div_title {
+	width: 350px;
+	float: left;
+	color: #333;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	text-align: center;
+}
+
+.Modify_div_con {
+	width: 440px;
+	float: left;
+	margin-top: 25px;
+}
+
+.Modify_div_con_name {
+	width: 80px;
+	float: left;
+	margin-top: 5px;
+}
+
+.Modify_div_con_input {
+	width: 250px;
+	height: 20px;
+	border: 1px solid #7b7b7b;
+	background-color: #fff;
+}
+
+.Modify_button01 {
+	width: 80px;
+	height: 25px;
+	float: left;
+	background-image: url(../images/modify01.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	border: none;
+	margin-left: 80px;
+	margin-right: 50px;
+}
+
+.Modify_button02 {
+	width: 80px;
+	height: 25px;
+	float: left;
+	background-image: url(../images/modify02.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	border: none;
+}

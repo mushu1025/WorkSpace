@@ -1,0 +1,22 @@
+body {
+	width:100%;font-size: 12px; margin:0px; padding:0px; color:#333; background-color:#174a99;
+}
+.main{ width:100%; min-height:600px; height:100%; margin:0 auto; background-image:url(../images/body_bg1.jpg); background-repeat:no-repeat; background-position:center center; position:absolute;}
+.main_box{ width:408px; height:300px; margin:auto; position:fixed;_position:absolute;
+ z-index:1;
+   left:48%;  
+   top:35%;  
+   margin:-100px 0 0 -150px ;}
+.login_logo{ float:left;}
+.login_form_con{ width:408px; height:263px; float:left; position:relative;}
+input,button,select,textarea{outline:none}
+.form_div{ width:408px; height:263px; float:left; background-image:url(../images/login_bg.png); background-repeat:no-repeat; background-position:left top; opacity:0.5;filter:Alpha(opacity=30);}
+.login_form{ width:280px; height:200px; float:left; position:absolute; left:70px; top:50px; z-index:3;}
+
+.login_name{ width:216px; height:36px; float:left; line-height:25px; border:none; background-image:url(../images/input_bg01.png); background-repeat:no-repeat; background-position:left top; padding-left:50px; color:#7a87a5; border:none; background-color:#eeeeee;}
+.login_password{ width:216px; height:36px; float:left; line-height:25px; border:none; background-image:url(../images/input_bg02.png); background-repeat:no-repeat; background-position:left top; padding-left:50px; margin-top:15px; color:#7a87a5; border:none; background-color:#eeeeee;}
+.btn-login{ display:block; margin:0; padding:10px 0; width:100%; color:#fff; border:2px solid #ECEFF1; border-radius:6px 6px 6px 6px;  background:#33B5E5; font-size:16.5px; text-decoration:none; cursor:pointer; border:0; }
+
+.login_denglu{ width:140px; height:35px; float:left; margin-top:22px; margin-left:60px; background-image:url(../images/denglu_bg.jpg); background-repeat:no-repeat; background-position:left top; border:none;}
+.login_tuichu{ width:85px; height:28px; float:left; margin-top:22px; margin-left:25px; background-image:url(../images/tuichu_pic.png); background-repeat:no-repeat; background-position:left top; border:none;}
+.jishuzhichi{ width:280px; float:left; color:#333; margin-top:30px;}

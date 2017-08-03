@@ -1,0 +1,330 @@
+/* *
+{
+    font-size: 12px;
+    font-family: Tahoma,Verdana,微软雅黑,新宋体;
+}
+body
+{
+    background: #D2E0F2;
+}
+a
+{
+    color: Black;
+    text-decoration: none;
+}
+a:hover
+{
+    color: Red;
+    text-decoration: underline;
+}
+.footer
+{
+    text-align: center;
+    color: #15428B;
+    margin: 0px;
+    padding: 0px;
+    line-height: 23px;
+    font-weight: bold;
+}
+.head a
+{
+    color: White;
+    text-decoration: underline;
+}
+.easyui-accordion ul
+{
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px;
+}
+.easyui-accordion ul li
+{
+    padding: 0px;
+}
+.easyui-accordion ul li a
+{
+    line-height: 24px;
+}
+.easyui-accordion ul li div
+{
+    margin: 2px 0px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.easyui-accordion ul li div.hover
+{
+    border: 1px dashed #99BBE8;
+    background: #E0ECFF;
+    cursor: pointer;
+}
+.easyui-accordion ul li div.hover a
+{
+    color: #416AA3;
+}
+.easyui-accordion ul li div.selected
+{
+    border: 1px solid #99BBE8;
+    background: #E0ECFF;
+    cursor: default;
+}
+.easyui-accordion ul li div.selected a
+{
+    color: #416AA3;
+    font-weight: bold;
+}
+
+.icon
+{
+    background: url(../images/tabicons.png) no-repeat;
+    width: 18px;
+    line-height: 18px;
+    display: inline-block;
+}
+.icon-sys
+{
+    background-position: 0px -200px;
+}
+.icon-set
+{
+    background-position: -380px -200px;
+}
+.icon-add
+{
+    background-position: -20px 0px;
+}
+.icon-add1
+{
+    background: url('icon/edit_add.png') no-repeat;
+}
+.icon-nav
+{
+    background-position: -100px -20px;
+}
+.icon-users
+{
+    background-position: -100px -480px;
+}
+.icon-role
+{
+    background-position: -360px -200px;
+}
+.icon-set
+{
+    background-position: -380px -200px;
+}
+.icon-log
+{
+    background-position: -380px -80px;
+}
+.icon-delete16
+{
+    background: url('icon/delete.gif') no-repeat;
+    width: 18px;
+    line-height: 18px;
+    display: inline-block;
+}
+.icon-delete
+{
+    background-position: -140px -120px;
+}
+.icon-edit
+{
+    background-position: -380px -320px;
+}
+.icon-magic
+{
+    background-position: 0px -500px;
+}
+.icon-database
+{
+    background-position: -20px -140px;
+}
+.icon-expand
+{
+    background: url('/images/coll2.gif') no-repeat;
+}
+.icon-collapse
+{
+    background: url('/images/coll3.gif') no-repeat;
+}
+
+
+
+
+.footer
+{
+    text-align: center;
+    color: #afcdfa;
+    margin: 0px;
+    padding: 0px;
+    line-height: 23px;
+    font-weight: bold;
+}
+
+.head
+{
+    float: right;
+    margin-top: 10px;
+}
+.head a
+{
+    color: White;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+.easyui-accordion
+{
+    width: 245px;
+    float: left;
+    background-image: url(../images/left_menu_bg.jpg)) no-repeat left bottom;
+}
+
+.top_middle{ float:left; margin-left:100px; margin-top:15px;}
+.dh_top_bg{ width:100%; float:left; height:50px; background-image:url(../images/dh_top_bg.png); background-repeat:no-repeat; background-position:right top; background-color:#2696ec; overflow-x: hidden; overflow-y: hidden;}
+.logo_login{width:150px; float:left; margin-left:10px; margin-top:8px;}
+
+
+.input_add_text{ float:left; background-color:#fff; border:1px solid #c2c2c2; margin-top:3px;}
+.top_middle
+{
+    float: left;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+.dh_top_bg
+{
+    width: 100%;
+    float: left;
+    height: 50px;
+    background-image: url(../images/dh_top_bg.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-color: #2696ec;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.logo_login
+{
+    width: 150px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+.Modify_box
+{
+    width: 450px;
+    min-height: 280px;
+    float: left;
+    background-color: #cdd4e9;
+}
+
+.add_tr
+{
+    width: 100%;
+    height: 30px;
+    float: left;
+    line-height: 28px;
+    border-bottom: 1px dashed #ccc;
+    padding-left: 10px;
+    
+    display: block;
+}
+.add_tr th
+{
+    font-size: 12px;
+    font-weight: normal;
+    color: #555;
+    float: left; text-align:right;
+    width:85px;
+}
+
+.add_tr td
+{
+   float: left;
+   text-align:left;
+}
+.add_tr2
+{
+    width: 100%;
+    height: 30px;
+    float: left;
+    line-height: 28px;
+    padding-left: 10px;
+   
+    display: block;
+}
+.add_tr2 th
+{
+    font-size: 12px;
+    font-weight: normal;
+    color: #555;
+    float: left; text-align:right;
+    width:85px;
+}
+.add_tr2 td
+{
+   float: left;
+   text-align:left;
+}
+
+.add_tr3
+{
+    width: 100%;
+    height: 30px;
+    float: left;
+    line-height: 28px;
+    padding-left: 10px;
+    border-bottom: 1px dashed #ccc;
+    display: block;
+}
+.add_tr3 th
+{
+    font-size: 12px;
+    font-weight: normal;
+    color: #555;
+    float: left; text-align:right;
+    width:110px;
+}
+.add_tr3 td
+{
+   float: left;
+   text-align:left;
+} */
+
+/*Begin 主畫面樣式  Begin */
+.top_middle
+{
+    float: left;
+    margin-left:10px;
+    margin-top: 4px;
+    color:Black;
+}
+.top_middle img
+{ float:left; margin-right:5px;}
+.top_right
+{
+    float: right;
+    margin-left:10px;
+    margin-top: 0px;
+    margin-right: 10px;
+    color:Black;
+   
+}
+.top_right img
+{ float:left; margin-top:1px; margin-right:5px;}
+.top_right a
+{ float:left;
+    color:Black; text-decoration:none; margin-top:3px;
+}
+/*End 主畫面樣式  End*/
+
+
+
+
+
+
+/*画面控件布局*/
+.search_div{width:100%; float:left; height:55px; background-color:#d3dfea; padding:5px;}
+.search_div_con{width:80%; float:left;}
+.search_div2{width:80%; float:left; margin-top:5px;}
+.opreationdiv{padding: 5px; background-color:#D9EDF4; width: 100%; border: 1px solid #ccc}

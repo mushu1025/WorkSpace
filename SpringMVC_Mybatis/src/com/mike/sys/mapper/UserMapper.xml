@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace命名空间，作用就是对sql进行分类化管理，理解sql隔离 
+注意：使用mapper代理方法开发，namespace有特殊重要的作用，namespace等于mapper接口地址
+-->
+<mapper namespace="com.mike.sys.dao.UserMapper">
+	<resultMap id="BaseResultMap" type="com.mike.sys.pojo.User" >
+    <id column="Id" property="id" jdbcType="BIGINT" />
+    <result column="User_name" property="user_name" jdbcType="VARCHAR" />
+    <result column="Password" property="password" jdbcType="VARCHAR" />
+    <result column="Age" property="age" jdbcType="BIGINT" />
+  </resultMap>
+  
+	<select id="findUserById" parameterType="int" resultType="com.mike.sys.pojo.User">
+		SELECT * FROM user_t WHERE id=#{value}
+	</select>
+	<select id="findUserList" resultType="com.mike.sys.pojo.User">
+		SELECT * FROM user_t
+	</select>
+	<select id="findUserByName" parameterType="String" resultType="com.mike.sys.pojo.User">
+		SELECT * FROM user_t WHERE user_name=#{value}
+	</select>
+	<select id="findFunctionMenu" resultType="com.mike.sys.pojo.FunctionTreeEntity">
+		SELECT * FROM functionmenu
+	</select>
+	<select id="findFunctionMenuByID" parameterType="int" resultType="com.mike.sys.pojo.FunctionTreeEntity">
+		SELECT * FROM functionmenu 
+		where id=#{id}
+	</select>
+	<update id="ModifyPassword" parameterType="com.mike.sys.pojo.User" >
+    update user_t
+    <set > 
+      <if test="user_name != null" >
+        user_name = #{user_name,jdbcType=VARCHAR},
+      </if> 
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if> 
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  
+	<sql id="Base_Column_List">
+		id,user_name,password,age
+	</sql>
+	<select id="queryByCount" resultType="java.lang.Integer">
+		select count(1)
+		from
+		user_t
+	</select>
+	<select id="selectAll" resultMap="BaseResultMap"> 
+	select * from (select 
+	<include refid="Base_Column_List"/>
+	, row_number() over(ORDER BY id ASC) AS num from user_t) as UserMode
+	<trim prefix="where" prefixOverrides="and | or">
+	  <if test="pager.oracleQueryCondition != null and pager.oracleQueryCondition != ''" >
+	    and ${pager.oracleQueryCondition}
+	  </if>
+	</trim>
+    <if test="pager.orderCondition != null and pager.orderCondition != ''" >
+      ${pager.orderCondition}
+    </if>
+  </select>
+</mapper>
+
+

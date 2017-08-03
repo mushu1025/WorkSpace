@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mike.sys.dao.T_FunctionItemMapper" >
+  <resultMap id="BaseResultMap" type="com.mike.sys.pojo.T_FunctionItem" >
+    <id column="FitemId" property="fitemid" jdbcType="INTEGER" />
+    <result column="FitemName" property="fitemname" jdbcType="VARCHAR" />
+    <result column="FparentId" property="fparentid" jdbcType="INTEGER" />
+    <result column="Furl" property="furl" jdbcType="VARCHAR" />
+    <result column="FunctionType" property="functiontype" jdbcType="INTEGER" />
+    <result column="iconcls" property="iconcls" jdbcType="VARCHAR" />
+    <result column="Fmodifier" property="fmodifier" jdbcType="VARCHAR" />
+    <result column="FmodifyTime" property="fmodifytime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    FitemId, FitemName, FparentId, Furl, FunctionType, iconcls, Fmodifier, FmodifyTime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_FunctionItem
+    where FitemId = #{fitemid,jdbcType=BIGINT}
+    and FunctionType=0
+  </select>
+  
+  <!-- <select id="findFunctionItemTree" resultType="com.mike.sys.pojo.T_FunctionItem">
+		SELECT * FROM T_FunctionItem
+	</select> -->
+	<select id="findFunctionItemTree" resultType="com.mike.sys.pojo.T_FunctionItem">
+		SELECT 
+		<include refid="Base_Column_List" />
+		FROM T_FunctionItem
+		where FunctionType=0
+	</select>
+	<select id="findFunctionItemBotton" resultType="com.mike.sys.pojo.T_FunctionItem">
+		SELECT 
+		<include refid="Base_Column_List" />
+		FROM T_FunctionItem
+		where FunctionType=1
+	</select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from T_FunctionItem
+    where FitemId = #{fitemid,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.mike.sys.pojo.T_FunctionItem" >
+    insert into T_FunctionItem (FitemId, FitemName, FparentId, 
+      Furl, FunctionType, Fmodifier, 
+      FmodifyTime)
+    values (#{fitemid,jdbcType=BIGINT}, #{fitemname,jdbcType=VARCHAR}, #{fparentid,jdbcType=BIGINT}, 
+      #{furl,jdbcType=VARCHAR}, #{functiontype,jdbcType=BIGINT}, #{fmodifier,jdbcType=VARCHAR}, 
+      #{fmodifytime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mike.sys.pojo.T_FunctionItem" >
+    insert into T_FunctionItem
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="fitemid != null" >
+        FitemId,
+      </if>
+      <if test="fitemname != null" >
+        FitemName,
+      </if>
+      <if test="fparentid != null" >
+        FparentId,
+      </if>
+      <if test="furl != null" >
+        Furl,
+      </if>
+      <if test="functiontype != null" >
+        FunctionType,
+      </if>
+      <if test="fmodifier != null" >
+        Fmodifier,
+      </if>
+      <if test="fmodifytime != null" >
+        FmodifyTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="fitemid != null" >
+        #{fitemid,jdbcType=BIGINT},
+      </if>
+      <if test="fitemname != null" >
+        #{fitemname,jdbcType=VARCHAR},
+      </if>
+      <if test="fparentid != null" >
+        #{fparentid,jdbcType=BIGINT},
+      </if>
+      <if test="furl != null" >
+        #{furl,jdbcType=VARCHAR},
+      </if>
+      <if test="functiontype != null" >
+        #{functiontype,jdbcType=BIGINT},
+      </if>
+      <if test="fmodifier != null" >
+        #{fmodifier,jdbcType=VARCHAR},
+      </if>
+      <if test="fmodifytime != null" >
+        #{fmodifytime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mike.sys.pojo.T_FunctionItem" >
+    update T_FunctionItem
+    <set >
+      <if test="fitemname != null" >
+        FitemName = #{fitemname,jdbcType=VARCHAR},
+      </if>
+      <if test="fparentid != null" >
+        FparentId = #{fparentid,jdbcType=BIGINT},
+      </if>
+      <if test="furl != null" >
+        Furl = #{furl,jdbcType=VARCHAR},
+      </if>
+      <if test="functiontype != null" >
+        FunctionType = #{functiontype,jdbcType=BIGINT},
+      </if>
+      <if test="fmodifier != null" >
+        Fmodifier = #{fmodifier,jdbcType=VARCHAR},
+      </if>
+      <if test="fmodifytime != null" >
+        FmodifyTime = #{fmodifytime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where FitemId = #{fitemid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mike.sys.pojo.T_FunctionItem" >
+    update T_FunctionItem
+    set FitemName = #{fitemname,jdbcType=VARCHAR},
+      FparentId = #{fparentid,jdbcType=BIGINT},
+      Furl = #{furl,jdbcType=VARCHAR},
+      FunctionType = #{functiontype,jdbcType=BIGINT},
+      Fmodifier = #{fmodifier,jdbcType=VARCHAR},
+      FmodifyTime = #{fmodifytime,jdbcType=TIMESTAMP}
+    where FitemId = #{fitemid,jdbcType=BIGINT}
+  </update>
+</mapper>

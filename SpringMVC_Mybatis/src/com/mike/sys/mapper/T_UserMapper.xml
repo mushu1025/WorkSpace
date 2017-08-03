@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mike.sys.dao.T_UserMapper" >
+  <resultMap id="BaseResultMap" type="com.mike.sys.pojo.T_User" >
+    <id column="FuserId" property="fuserid" jdbcType="INTEGER" />
+    <result column="FstraffId" property="fstraffid" jdbcType="INTEGER" />
+    <result column="FuserName" property="fusername" jdbcType="VARCHAR" />
+    <result column="Fpassword" property="fpassword" jdbcType="VARCHAR" />
+    <result column="FroleId" property="froleid" jdbcType="INTEGER" />
+    <result column="Fmodifier" property="fmodifier" jdbcType="VARCHAR" />
+    <result column="FmodifyTime" property="fmodifytime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    FuserId, FstraffId, FuserName, Fpassword, FroleId, Fmodifier, FmodifyTime
+  </sql>
+  
+  <select id="queryByCount" resultType="java.lang.Integer">
+		select count(1) from T_User
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap"> 
+	select * from (select 
+	<include refid="Base_Column_List"/>
+	, row_number() over(ORDER BY FuserId ASC) AS num from T_User) as UserMode
+	<trim prefix="where" prefixOverrides="and | or">
+	  <if test="pager.oracleQueryCondition != null and pager.oracleQueryCondition != ''" >
+	    and ${pager.oracleQueryCondition}
+	  </if>
+	</trim>
+    <if test="pager.orderCondition != null and pager.orderCondition != ''" >
+      ${pager.orderCondition}
+    </if>
+  </select>
+  
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_User
+    where FuserId = #{fuserid,jdbcType=INTEGER}
+  </select>
+  <select id="findUserByName" parameterType="String" resultType="com.mike.sys.pojo.T_User">
+		SELECT
+		<include refid="Base_Column_List" />
+		 FROM T_User WHERE FuserName=#{userName}
+	</select>
+	<select id="findUserList" resultType="com.mike.sys.pojo.T_User">
+		SELECT
+		<include refid="Base_Column_List" />
+		 FROM T_User
+	</select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from T_User
+    where FuserId = #{fuserid,jdbcType=INTEGER}
+  </delete>
+  
+   <delete id="deleteUserList" parameterType="com.mike.sys.pojo.T_User" >
+    delete from T_User
+    where FuserId = #{fuserid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mike.sys.pojo.T_User" >
+    insert into T_User (FuserId, FstraffId, FuserName, 
+      Fpassword, FroleId, Fmodifier, 
+      FmodifyTime)
+    values (#{fuserid,jdbcType=INTEGER}, #{fstraffid,jdbcType=INTEGER}, #{fusername,jdbcType=VARCHAR}, 
+      #{fpassword,jdbcType=VARCHAR}, #{froleid,jdbcType=INTEGER}, #{fmodifier,jdbcType=VARCHAR}, 
+      #{fmodifytime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mike.sys.pojo.T_User" >
+    insert into T_User
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="fuserid != null" >
+        FuserId,
+      </if>
+      <if test="fstraffid != null" >
+        FstraffId,
+      </if>
+      <if test="fusername != null" >
+        FuserName,
+      </if>
+      <if test="fpassword != null" >
+        Fpassword,
+      </if>
+      <if test="froleid != null" >
+        FroleId,
+      </if>
+      <if test="fmodifier != null" >
+        Fmodifier,
+      </if>
+      <if test="fmodifytime != null" >
+        FmodifyTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="fuserid != null" >
+        #{fuserid,jdbcType=INTEGER},
+      </if>
+      <if test="fstraffid != null" >
+        #{fstraffid,jdbcType=INTEGER},
+      </if>
+      <if test="fusername != null" >
+        #{fusername,jdbcType=VARCHAR},
+      </if>
+      <if test="fpassword != null" >
+        #{fpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="froleid != null" >
+        #{froleid,jdbcType=INTEGER},
+      </if>
+      <if test="fmodifier != null" >
+        #{fmodifier,jdbcType=VARCHAR},
+      </if>
+      <if test="fmodifytime != null" >
+        #{fmodifytime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mike.sys.pojo.T_User" >
+    update T_User
+    <set >
+      <if test="fstraffid != null" >
+        FstraffId = #{fstraffid,jdbcType=INTEGER},
+      </if>
+      <if test="fusername != null" >
+        FuserName = #{fusername,jdbcType=VARCHAR},
+      </if>
+      <if test="fpassword != null" >
+        Fpassword = #{fpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="froleid != null" >
+        FroleId = #{froleid,jdbcType=INTEGER},
+      </if>
+      <if test="fmodifier != null" >
+        Fmodifier = #{fmodifier,jdbcType=VARCHAR},
+      </if>
+      <if test="fmodifytime != null" >
+        FmodifyTime = #{fmodifytime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where FuserId = #{fuserid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mike.sys.pojo.T_User" >
+    update T_User
+    set FstraffId = #{fstraffid,jdbcType=INTEGER},
+      FuserName = #{fusername,jdbcType=VARCHAR},
+      Fpassword = #{fpassword,jdbcType=VARCHAR},
+      FroleId = #{froleid,jdbcType=INTEGER},
+      Fmodifier = #{fmodifier,jdbcType=VARCHAR},
+      FmodifyTime = #{fmodifytime,jdbcType=TIMESTAMP}
+    where FuserId = #{fuserid,jdbcType=INTEGER}
+  </update>
+  <update id="ModifyPassword" parameterType="com.mike.sys.pojo.T_User" >
+    update T_User
+    <set >
+      <if test="fpassword != null" >
+        Fpassword = #{fpassword,jdbcType=VARCHAR},
+      </if> 
+    </set>
+    where FuserId = #{fuserid,jdbcType=INTEGER}
+  </update>
+</mapper>

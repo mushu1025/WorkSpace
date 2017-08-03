@@ -1,0 +1,336 @@
+{
+	font-size: 12px;
+	font-family: Tahoma, Verdana, 微软雅黑, 新宋体;
+}
+
+body {
+	background: #D2E0F2;
+}
+
+a {
+	color: Black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: Red;
+	text-decoration: underline;
+}
+
+.footer {
+	text-align: center;
+	color: #15428B;
+	margin: 0px;
+	padding: 0px;
+	line-height: 23px;
+	font-weight: bold;
+}
+
+.head a {
+	color: White;
+	text-decoration: underline;
+}
+
+.easyui-accordion ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.easyui-accordion ul li {
+	padding: 0px;
+}
+
+.easyui-accordion ul li a {
+	line-height: 24px;
+}
+
+.easyui-accordion ul li div {
+	margin: 2px 0px;
+	padding-left: 10px;
+	padding-top: 2px;
+}
+
+.easyui-accordion ul li div.hover {
+	border: 1px dashed #99BBE8;
+	background: #E0ECFF;
+	cursor: pointer;
+}
+
+.easyui-accordion ul li div.hover a {
+	color: #416AA3;
+}
+
+.easyui-accordion ul li div.selected {
+	border: 1px solid #99BBE8;
+	background: #E0ECFF;
+	cursor: default;
+}
+
+.easyui-accordion ul li div.selected a {
+	color: #416AA3;
+	font-weight: bold;
+}
+
+.icon {
+	background: url(../images/tabicons.png) no-repeat;
+	width: 18px;
+	line-height: 18px;
+	display: inline-block;
+}
+
+.icon-sys {
+	background-position: 0px -200px;
+}
+
+.icon-set {
+	background-position: -380px -200px;
+}
+
+.icon-nav {
+	background-position: -100px -20px;
+}
+
+.icon-users {
+	background-position: -100px -480px;
+}
+
+.icon-role {
+	background-position: -360px -200px;
+}
+
+.icon-log {
+	background-position: -380px -80px;
+}
+
+.icon-magic {
+	background-position: 0px -500px;
+}
+
+.icon-database {
+	background-position: -20px -140px;
+}
+
+.footer {
+	text-align: center;
+	color: #afcdfa;
+	margin: 0px;
+	padding: 0px;
+	line-height: 23px;
+	font-weight: bold;
+}
+
+.head {
+	float: right;
+	margin-top: 10px;
+}
+
+.head a {
+	color: White;
+	text-decoration: underline;
+	margin-left: 10px;
+}
+
+.easyui-accordion {
+	width: 245px;
+	float: left;
+	background-image: url(../images/left_menu_bg.jpg) ) no-repeat left
+		bottom;
+}
+
+.numberbox .textbox-text {
+	text-align: right;
+}
+
+/*
+.input_add_text {
+	float: left;
+	background-color: #fff;
+	border: 1px solid #c2c2c2;
+	margin-top: 3px;
+}
+
+.add_tr {
+	width: 100%;
+	height: 30px;
+	float: left;
+	line-height: 28px;
+	border-bottom: 1px dashed #ccc;
+	padding-left: 10px;
+	display: block;
+}
+
+.add_tr th {
+	font-size: 12px;
+	font-weight: normal;
+	color: #555;
+	float: left;
+	text-align: right;
+	width: 85px;
+}
+
+.add_tr td {
+	float: left;
+	text-align: left;
+}
+
+.add_tr2 {
+	width: 100%;
+	height: 30px;
+	float: left;
+	line-height: 28px;
+	padding-left: 10px;
+	display: block;
+}
+
+.add_tr2 th {
+	font-size: 12px;
+	font-weight: normal;
+	color: #555;
+	float: left;
+	text-align: right;
+	width: 85px;
+}
+
+.add_tr2 td {
+	float: left;
+	text-align: left;
+}
+
+.add_tr3 {
+	width: 100%;
+	height: 30px;
+	float: left;
+	line-height: 28px;
+	padding-left: 10px;
+	border-bottom: 1px dashed #ccc;
+	display: block;
+}
+
+.add_tr3 th {
+	font-size: 12px;
+	font-weight: normal;
+	color: #555;
+	float: left;
+	text-align: right;
+	width: 110px;
+}
+
+.add_tr3 td {
+	float: left;
+	text-align: left;
+}
+
+.search_div {
+	width: 100%;
+	float: left;
+	height: 55px;
+	background-color: #d3dfea;
+	padding: 5px;
+}
+
+.search_div_con {
+	width: 80%;
+	float: left;
+}
+
+.search_div2 {
+	width: 80%;
+	float: left;
+	margin-top: 5px;
+}
+*/
+
+/*画面输入|单据表头样式*/
+.InputForm
+{
+    width:98%;
+    height:98%;
+    overflow:hidden;      
+}
+.InputForm table tr
+{
+    width: 100%;
+    height: 30px;
+    float: left;
+    line-height: 28px;
+    border-bottom: 1px dashed #ccc;
+    padding-left: 10px;
+    display: block;    
+    width:98%;    
+}
+.InputForm .title
+{
+    font-size:20px;
+    text-align:center;
+    font-weight:bold;
+    width:100%;
+}
+.InputForm table tr th
+{
+    font-size: 12px;
+    font-weight: normal;
+    color: #555;
+    float: left; text-align:right;
+    width:85px;  
+}
+.InputForm table tr td
+{
+   float: left;
+   text-align:left;     
+}
+.InputForm table input
+{
+    font-size: 12px;
+    font-weight: normal;
+}
+/*画面输入|单据表头样式*/
+
+
+.conditionText{
+   	float:left; 
+   	margin-left:5px;
+   	margin-right:5px;
+   	margin-top:10px;
+   	text-align: right;
+}
+.conditionInput{
+	float:left;margin-top:8px;
+}
+.conditionInput input{
+	float:left;
+	font-size: 12px;
+}
+.conditionInput select{
+	float:left;margin-top:5px;
+}
+.condition_div{
+	/* width:310px; */
+	float:left;
+}
+.condition_firstdiv{
+	/* width:310px; */
+	float:left;
+}
+.condition_seconddiv{
+	/* width:310px; */
+	float:left;
+}
+.condition_thirddiv{
+	/* width:310px; */
+	float:left;
+}
+.condition_fourthdiv{
+	/* width:310px; */
+	float:left;
+}
+
+.opreationdiv{padding: 5px; background-color:#D9EDF4; width: 100%; border: 1px solid #ccc;float:left;}
+.opreationdiv a{ margin-left:10px;}
+.opreationFirstdiv{padding: 0px;width: auto;background-color:#D9EDF4; border: 0px solid #ccc;float:left;}
+.opreationSeconddiv{padding: 0px;width: auto;background-color:#D9EDF4; border: 0px solid #ccc;float:left;}
+.opreationthirddiv{padding: 0px;width: auto;background-color:#D9EDF4; border: 0px solid #ccc;float:left;}
+.opreationAlaysdiv{padding: 0px;width: auto;background-color:#D9EDF4; border: 0px solid #ccc;float:left;}
+
+
+

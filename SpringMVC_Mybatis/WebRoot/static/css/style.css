@@ -1,0 +1,47 @@
+body {
+	color: #333;
+	margin: 0px;
+	padding: 0px; font-family:"微软雅黑"; font-size:16px; background-color:#eeeeee; margin:0 auto;
+}
+a{ text-decoration:none;}
+.main{ width:100%;  margin:0 auto; position:absolute;}
+.top{ width:100%; min-height:45px; background-color:#e95702; float:left;}
+.top_title{width:55%; float:left; text-align:right; font-size:22px; color:#fff; font-weight:200; line-height:45px; }
+.dongtai{width:93%; margin:0 auto; height:100%; overflow:hidden;}
+.dongtai_con{width:93%; overflow:hidden; float:left; background-color:#fff; padding:10px; margin-top:10px;height:100%;}
+.dongtai_con_title{ width:100%; overflow:hidden; float:left; border-bottom:1px solid #ccc; padding-bottom:8px;font-family:"叶根友圆趣卡通体";}
+.dongtai_title{ width:100%; line-height:35px; float:left; border-bottom:1px solid #ff8d00;}
+.dongtai_title_span{ float:left; color:#ff8d00; font-weight:bold;}
+.dongtai_title_span2{ float:left; color:#666; margin-left:15px;}
+.dongtai_more{ float:right; color:#666; font-size:14px; margin-right:8px;}
+
+.dongtai_con_box{ width:100%; float:left; margin-top:15px;}
+.dongtai_left{ width:5%; float:left; margin-left:15px;}
+.dongtai_left img{ width:50px;}
+.dongtai_right{ width:92%; float:left; margin-left:8px;}
+.dongtao_middle{ width:60%; float:left; font-size:14px;}
+.dongtao_middle_name{ float:left;}
+.dongtao_middle_time{ float:left; font-size:12px; color:#666; line-height:22px;}
+.dongtao_middle_zf{ float:right; font-size:14px; margin-top:8px;}
+.dongtao_middle_zf a{ float:left; color:#f56902; margin-right:8px;}
+.dongtao_middle_zf a:hover{ float:left; color:#f56902; margin-right:8px; text-decoration:underline;}
+.dongtai_box_con{ width:98%; float:left; font-size:14px; padding:8px; background-color:#f3f3f3; line-height:26px; margin-top:8px; border:1px solid #e8e8e8;}
+.download{ width:100%; float:left; height:35px; line-height:30px; background-color:#f3f3f3; margin-top:15px; text-align:center; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

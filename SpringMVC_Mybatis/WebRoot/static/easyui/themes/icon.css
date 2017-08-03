@@ -1,0 +1,286 @@
+/*新增*/
+.icon-add{
+	background:url('icons/add.png') no-repeat center center;
+}
+
+/*修改*/
+.icon-edit{
+	background:url('icons/edit.png') no-repeat center center;
+}
+/*删除*/
+.icon-delete{
+	background:url('icons/delet.png') no-repeat center center;
+}
+
+/*保存*/
+.icon-save{
+	background:url('icons/save.png') no-repeat center center;
+}
+
+/*检索*/
+.icon-query{
+	background:url('icons/Query.png') no-repeat center center;
+}
+
+/*种猪检索*/
+.icon-pigquery{
+	background:url('icons/Query.png') no-repeat center center;
+}
+
+/*高级检索*/
+.icon-queryadvance{
+	background:url('icons/QueryAdvance.png') no-repeat center center;
+}
+
+/*关闭*/
+.icon-close{
+	background:url('icons/close.png') no-repeat center center;
+}
+
+/*取消*/
+.icon-cancel{
+	background:url('icons/Cancelled.png') no-repeat center center;
+}
+
+/*选择*/
+.icon-select{
+	background:url('icons/select.png') no-repeat center center;
+}
+
+/*审核*/
+.icon-auditing{
+	background:url('icons/approval.png') no-repeat center center;
+}
+/*反审核*/
+.icon-auditingreverse {
+	background:url('icons/approvalreverse.png') no-repeat center center;
+}
+/*提交审核*/
+.icon-auditingsubmit{
+	background:url('icons/submit.png') no-repeat center center;
+}
+/*审批*/
+.icon-approval{
+	background:url('icons/approval.png') no-repeat center center;
+}
+/*反审批*/
+.icon-approvalreverse {
+	background:url('icons/approvalreverse.png') no-repeat center center;
+}
+/*提交审批*/
+.icon-approvlsubmit{
+	background:url('icons/submit.png') no-repeat center center;
+}
+/*审核履历*/
+.icon-approvalHistoryView {
+	background:url('icons/Workflow.png') no-repeat center center;
+}
+
+/*应用*/
+.icon-application{
+	background:url('icons/Applicationcenter.png') no-repeat center center;
+}
+/*消息*/
+.icon-message{
+	background:url('icons/Messagecenter.png') no-repeat center center;
+}
+/*打印*/
+.icon-print{
+	background:url('icons/print.png') no-repeat center center;
+}
+/*打印预览*/
+.icon-printpreview{
+	background:url('icons/printpreview.png') no-repeat center center;
+}
+/*导出*/
+.icon-export{
+	background:url('icons/export.png') no-repeat center center;
+}
+/*导入*/
+.icon-import{
+	background:url('icons/import.png') no-repeat center center;
+}
+
+/*文件夹*/
+.icon-folder{
+	background:url('icons/folder.png') no-repeat center center;
+}
+/*生效*/
+.icon-effect{
+	background:url('icons/effect.png') no-repeat center center;
+}
+
+/*生成条件*/
+.icon-generatcondition{
+	background:url('icons/effect.png') no-repeat center center;
+}
+
+/*红冲*/
+.icon-redrushe{
+	background:url('icons/redrushe.png') no-repeat center center;
+}
+/*更多*/
+.icon-more{
+	background:url('icons/more.png') no-repeat center center;
+}
+
+.icon-tree01{
+	background:url('icons/tree01.png') no-repeat center center;
+}
+.icon-tree02{
+	background:url('icons/tree02.png') no-repeat center center;
+}
+.icon-tree03{
+	background:url('icons/tree03.png') no-repeat center center;
+}
+.icon-tree04{
+	background:url('icons/tree04.png') no-repeat center center;
+}
+
+
+
+
+.icon-adjust{
+	background:url('icons/adjust.png') no-repeat center center;
+}
+
+.icon-attachment{
+	background:url('icons/attachment.png') no-repeat center center;
+}
+.icon-batchcreat{
+	background:url('icons/batchcreat.png') no-repeat center center;
+}
+.icon-before{
+	background:url('icons/Before.png') no-repeat center center;
+}
+.icon-cancelled{
+	background:url('icons/Cancelled.png') no-repeat center center;
+}
+
+.icon-completed{
+	background:url('icons/Completed.png') no-repeat center center;
+}
+.icon-copy{
+	background:url('icons/copy.png') no-repeat center center;
+}
+.icon-createreceipts{
+	background:url('icons/createreceipts.png') no-repeat center center;
+}
+
+.icon-deletereceipts{
+	background:url('icons/deletereceipts.png') no-repeat center center;
+}
+.icon-disable{
+	background:url('icons/Disable.png') no-repeat center center;
+}
+
+.icon-editreceipts{
+	background:url('icons/editreceipts.png') no-repeat center center;
+}
+.icon-enable{
+	background:url('icons/Enable.png') no-repeat center center;
+}
+.icon-end{
+	background:url('icons/end.png') no-repeat center center;
+}
+.icon-exit{
+	background:url('icons/exit.png') no-repeat center center;
+}
+
+.icon-first{
+	background:url('icons/first.png') no-repeat center center;
+}
+.icon-frozen{
+	background:url('icons/frozen.png') no-repeat center center;
+}
+.icon-function{
+	background:url('icons/function.png') no-repeat center center;
+}
+.icon-help{
+	background:url('icons/help.png') no-repeat center center;
+}
+.icon-historicalversion{
+	background:url('icons/historicalversion.png') no-repeat center center;
+}
+
+.icon-instantmessage{
+	background:url('icons/Instantmessage.png') no-repeat center center;
+}
+.icon-link{
+	background:url('icons/Link.png') no-repeat center center;
+}
+.icon-location{
+	background:url('icons/Location.png') no-repeat center center;
+}
+.icon-maintain{
+	background:url('icons/maintain.png') no-repeat center center;
+}
+.icon-material{
+	background:url('icons/material.png') no-repeat center center;
+}
+
+.icon-messagesend{
+	background:url('icons/messageSend.png') no-repeat center center;
+}
+.icon-next{
+	background:url('icons/next.png') no-repeat center center;
+}
+.icon-nextprocess{
+	background:url('icons/nextprocess.png') no-repeat center center;
+}
+.icon-personnalselect{
+	background:url('icons/personnalselect.png') no-repeat center center;
+}
+.icon-pre{
+	background:url('icons/pre.png') no-repeat center center;
+}
+
+.icon-process_details{
+	background:url('icons/Process_details.png') no-repeat center center;
+}
+
+.icon-quickadd{
+	background:url('icons/quickadd.png') no-repeat center center;
+}
+.icon-recordssplit{
+	background:url('icons/recordssplit.png') no-repeat center center;
+}
+
+.icon-refresh{
+	background:url('icons/Refresh.png') no-repeat center center;
+}
+.icon-resultsview{
+	background:url('icons/resultsview.png') no-repeat center center;
+}
+.icon-reverse_audit{
+	background:url('icons/Reverse_audit.png') no-repeat center center;
+}
+.icon-rowadd{
+	background:url('icons/rowadd.png') no-repeat center center;
+}
+.icon-rowdelete{
+	background:url('icons/rowdelete.png') no-repeat center center;
+}
+
+.icon-see{
+	background:url('icons/See.png') no-repeat center center;
+}
+.icon-sort{
+	background:url('icons/Sort.png') no-repeat center center;
+}
+.icon-state_diagram{
+	background:url('icons/State_diagram.png') no-repeat center center;
+}
+
+.icon-submit2{
+	background:url('icons/submit2.png') no-repeat center center;
+}
+.icon-thaw{
+	background:url('icons/Thaw.png') no-repeat center center;
+}
+.icon-warning{
+	background:url('icons/warning.png') no-repeat center center;
+}
+.icon-workflow{
+	background:url('icons/Workflow.png') no-repeat center center;
+}

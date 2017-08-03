@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//WebRoot/decorators/model.jsp=UTF-8
+encoding//WebRoot/index.jsp=UTF-8
+encoding//WebRoot/static=UTF-8
+encoding//WebRoot/static/easyui/common/plugins/jui/jquery-ui-1.9.2.min.js=UTF-8
+encoding//WebRoot/static/js/index.js=UTF-8
+encoding//resources/CustomValidationMessages.properties=ISO-8859-1
+encoding//src/com/mike/sys/component/BaseModel.java=UTF-8
+encoding//src/com/mike/sys/component/Pager.java=UTF-8
+encoding//src/com/mike/sys/converter/CustomDateConverter.java=UTF-8
+encoding//src/com/mike/sys/exception=UTF-8
+encoding//src/com/mike/sys/interceptor/LoginInterceptor.java=UTF-8

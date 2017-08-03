@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mike.sys.dao.T_RoleMapper" >
+  <resultMap id="BaseResultMap" type="com.mike.sys.pojo.T_Role" >
+    <id column="FroleId" property="froleid" jdbcType="INTEGER" />
+    <result column="FroleName" property="frolename" jdbcType="VARCHAR" />
+    <result column="FparentId" property="fparentid" jdbcType="INTEGER" />
+    <result column="Functionitemids" property="functionitemids" jdbcType="VARCHAR" />
+    <result column="Fmodifier" property="fmodifier" jdbcType="VARCHAR" />
+    <result column="FmodifyTime" property="fmodifytime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    FroleId, FroleName, FparentId, Functionitemids, Fmodifier, FmodifyTime
+  </sql>
+  
+  <select id="queryByCount" resultType="java.lang.Integer">
+		select count(1) from T_Role
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap"> 
+	select * from (select 
+	<include refid="Base_Column_List"/>
+	, row_number() over(ORDER BY FroleId ASC) AS num from T_Role) as RoleMode
+	<trim prefix="where" prefixOverrides="and | or">
+	  <if test="pager.oracleQueryCondition != null and pager.oracleQueryCondition != ''" >
+	    and ${pager.oracleQueryCondition}
+	  </if>
+	</trim>
+    <if test="pager.orderCondition != null and pager.orderCondition != ''" >
+      ${pager.orderCondition}
+    </if>
+  </select>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_Role
+    where FroleId = #{froleid,jdbcType=INTEGER}
+  </select>
+  <select id="selectRoleTree" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_Role
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from T_Role
+    where FroleId = #{froleid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insertSelective" parameterType="com.mike.sys.pojo.T_Role" >
+    insert into T_Role
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="froleid != null" >
+        FroleId,
+      </if>
+      <if test="frolename != null" >
+        FroleName,
+      </if>
+      <if test="fparentid != null" >
+        FparentId,
+      </if>
+      <if test="functionitemids != null" >
+        Functionitemids,
+      </if>
+      <if test="fmodifier != null" >
+        Fmodifier,
+      </if>
+      <if test="fmodifytime != null" >
+        FmodifyTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="froleid != null" >
+        #{froleid,jdbcType=INTEGER},
+      </if>
+      <if test="frolename != null" >
+        #{frolename,jdbcType=VARCHAR},
+      </if>
+      <if test="fparentid != null" >
+        #{fparentid,jdbcType=INTEGER},
+      </if>
+      <if test="functionitemids != null" >
+        #{functionitemids,jdbcType=VARCHAR},
+      </if>
+      <if test="fmodifier != null" >
+        #{fmodifier,jdbcType=VARCHAR},
+      </if>
+      <if test="fmodifytime != null" >
+        #{fmodifytime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mike.sys.pojo.T_Role" >
+    update T_Role
+    <set >
+      <if test="frolename != null" >
+        FroleName = #{frolename,jdbcType=VARCHAR},
+      </if>
+      <if test="fparentid != null" >
+        FparentId = #{fparentid,jdbcType=INTEGER},
+      </if>
+      <if test="functionitemids != null" >
+        Functionitemids = #{functionitemids,jdbcType=VARCHAR},
+      </if>
+      <if test="fmodifier != null" >
+        Fmodifier = #{fmodifier,jdbcType=VARCHAR},
+      </if>
+      <if test="fmodifytime != null" >
+        FmodifyTime = #{fmodifytime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where FroleId = #{froleid,jdbcType=INTEGER}
+  </update>
+</mapper>
